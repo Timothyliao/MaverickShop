@@ -1,0 +1,44 @@
+<view class="container">
+
+	<view class="switchbtn" bindtap="switchSwiper">
+		<text>{{txLabel}}</text>
+		<image src="../../scr/img/icon/arrow_r.png"></image>
+	</view>
+
+	<swiper easing-function="easeOutCubic" class="sign-board" current="{{currentPage}}" bindchange="switchIndex">
+
+		<swiper-item>
+			<view class="word">
+				<text>阅读</text>
+				<text>丈量世界</text>
+			</view>
+			<view class="btnBox">
+				<view class="btn-fill">使用微信账号注册</view>
+				<view class="btn-blank">使用手机账号注册</view>
+			</view>
+		</swiper-item>
+
+		<swiper-item>
+			<view class="word">
+				<text>阅读</text>
+				<text>丈量世界</text>
+			</view>
+			<view class="inputBox">
+				<form>
+					<input placeholder="请输入账号" type="number" placeholder-style="color:#fff"></input>
+					<input placeholder="请输入密码" password="true" placeholder-style="color:#fff"></input>
+					<view form-type="submit" class="btn-fill" bindtap="login">登陆</view>
+					<view class="addInfoBox">
+						<view class="addInfoCheckBox" bindtap="checkAdmin">
+							<image src="{{adminImg}}" id="amdinCheck"></image>
+							<label for="amdinCheck">管理员</label>
+						</view>
+						<text>使用微信登陆？</text>
+					</view>
+				</form>
+			</view>
+		</swiper-item>
+
+	</swiper>
+
+</view>
