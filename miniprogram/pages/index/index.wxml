@@ -1,0 +1,14 @@
+<view>
+
+    <button type="primary" disabled="true" bindtap="addinfo">Add Info</button>
+
+    <button type="primary" bindtap="getinfo">Get Info</button>
+
+    <view wx:for="{{dataObj}}" wx:key="xx">
+        <view>book:{{item.name}}</view>
+        <view>author:{{item.author}}</view>
+        <view>price:￥{{item.price}}</view>
+        <image src="{{item.img}}"></image>
+    </view>
+
+</view>

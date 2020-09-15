@@ -1,0 +1,120 @@
+
+
+.weui-search-bar {
+    position: relative;
+    padding: 5px 0;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    box-sizing: border-box;
+  }
+  .weui-icon-search {
+    margin-right: 4px;
+    font-size: inherit;
+  }
+  .weui-icon-search_in-box {
+    position: absolute;
+    left: 10px;
+    top: 7px;
+  }
+  .weui-search-bar__text {
+    display: inline-block;
+    font-size: 16px;
+  }
+  .weui-search-bar__form {
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: auto;
+    flex: auto;
+    border-radius: 0px;
+    background: #FFFFFF;
+    border-bottom: 1rpx solid #E6E6EA;
+  }
+  .weui-search-bar__box {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  .weui-search-bar__input {
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+  }
+  .weui-search-bar__label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    border-radius: 3px;
+    text-align: center;
+    color: #9B9B9B;
+    background: #FFFFFF;
+    line-height: 28px;
+  }
+  .weui-search-bar__cancel-btn {
+    margin-left: 10px;
+    line-height: 28px;
+    font-size: 14px;
+    color: #365DB4;
+    white-space: nowrap;
+  }
+
+#shoplist{
+    display: flex;
+    flex-direction: column;
+}
+
+.itemBox{
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    transition: .3s;
+}
+
+.itemBox:hover{
+    background-color: #f8f8f8;
+}
+
+.imgBox{
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    background-position: left;
+    background-size: auto 90%;
+    background-repeat: no-repeat;
+}
+
+.detail{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.detail text,
+.detail .starBox{
+    display: block;
+    font-size: 12px;
+    padding: 2px 0;
+    color:  #292C32;
+}
+
+.starBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.starBox cover-image{
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+}

@@ -1,0 +1,6 @@
+- DarkBlue : #365DB4
+- Blue : #0A84FF
+- Grey : #AAAAAA
+- DarkBlack : #272A2D
+- Black : #292C32
+- Whilte : #FFFFFF

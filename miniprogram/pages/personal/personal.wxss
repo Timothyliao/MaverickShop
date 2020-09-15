@@ -1,0 +1,61 @@
+#personInfoBox{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+#personInfoBox cover-image{
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+#personInfo_detail{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+#personInfo_detail text{
+    display: block;
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+#personInfo_detail view{
+    background-color: #596275;
+    color: #ffffff;
+    text-align: center;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+#settingBox{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#settingBox .settingItem{
+    width: 33.3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.settingItem text{
+    padding-left: 5px;
+    font-size: 13px;
+}
+
+#settingBox cover-image{
+    width: 22px;
+    height: 22px;
+}
