@@ -5,9 +5,12 @@ Page({
      * 页面的初始数据
      */
     data: {
-        txLabel: '登陆',
         currentPage: 0,
-        adminImg: '../../scr/img/icon/check-f.png'
+        adminImg: '../../scr/img/icon/check-f.png',
+        checkBtnColor: 'grey',
+        isUser: true,
+        switchIcon: "pullright",
+        switchLabel: "注册"
     },
 
     /**
@@ -18,31 +21,52 @@ Page({
     },
 
     switchSwiper: function (e) {
-        let label = this.data.currentPage == 0 ? '注册' : '登陆'
+        let label = this.data.currentPage == 0 ? '登陆' : '注册'
+        let icon = this.data.currentPage == 0 ? 'pullleft' : 'pullright'
         let index = this.data.currentPage == 0 ? 1 : 0
         this.setData({
-            txLabel: label,
-            currentPage: index
+            switchLabel: label,
+            currentPage: index,
+            switchIcon: icon
         })
     },
 
     switchIndex: function (e) {
         this.setData({
-            txLabel : e.detail.current == 0 ? '登陆' : '注册',
-            currentPage: e.detail.current
+            switchLabel : e.detail.current == 0 ? '注册' : '登陆',
+            currentPage: e.detail.current,
+            switchIcon: e.detail.current == 0 ? 'pullright' : 'pullleft'
         })
     },
 
     checkAdmin: function(e){
-        let url = this.data.adminImg == '../../scr/img/icon/check-f.png' ? '../../scr/img/icon/checked-f.png' : '../../scr/img/icon/check-f.png'
+        let color = this.data.checkBtnColor == 'grey' ? 'blue' : 'grey'
         this.setData({
-            adminImg : url
+            checkBtnColor : color
         })
     },
 
     login: function(e){
         wx.switchTab({
-          url: '../shop/shop',
+          url: '../user/shop/shop',
+        })
+    },
+
+    adminLogin:function(e){
+        wx.navigateTo({
+          url: '../management/index/index',
+        })
+    },
+
+    goUser: function(e) {
+        this.setData({
+            isUser : true
+        })
+    },
+
+    goAdmin: function(e) {
+        this.setData({
+            isUser : false
         })
     }
 

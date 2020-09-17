@@ -65,56 +65,30 @@
     white-space: nowrap;
   }
 
-#shoplist{
-    display: flex;
-    flex-direction: column;
+#shoplist .cu-item:hover{
+  background-color: #f8f8f8;
 }
 
-.itemBox{
-    width: 100%;
-    padding: 5px;
-    display: flex;
-    flex-direction: row;
-    transition: .3s;
+#shoplist .cu-item text{
+  text-align: left;
+  font-size: 12px;
+  color:  #292C32;
+  margin: 0;
+  line-height: 30rpx;
+  padding-left: 10px;
+  text-overflow: ellipsis;
 }
 
-.itemBox:hover{
-    background-color: #f8f8f8;
+#shoplist .starBox{
+  padding-left: 10px;
+  padding-bottom: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
 }
 
-.imgBox{
-    width: 120px;
-    height: 120px;
-    border-radius: 10px;
-    background-position: left;
-    background-size: auto 90%;
-    background-repeat: no-repeat;
-}
-
-.detail{
-    margin-left: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.detail text,
-.detail .starBox{
-    display: block;
-    font-size: 12px;
-    padding: 2px 0;
-    color:  #292C32;
-}
-
-.starBox{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-}
-
-.starBox cover-image{
-    height: 12px;
-    width: 12px;
-    display: inline-block;
+#shoplist  .starBox cover-image{
+  height: 12px;
+  width: 12px;
+  display: inline-block;
 }

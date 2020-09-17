@@ -1,0 +1,36 @@
+<scroll-view scroll-y class="scrollPage">
+	<image src='../../../scr/img/bg_t.png' mode='widthFix' class='png' style='width:100%;height:200rpx'></image>
+	<view class="container">
+		<view>
+			<view class="weui-search-bar">
+				<view class="weui-search-bar__form">
+					<!-- 最初始时的搜索框 -->
+					<view class="weui-search-bar__box">
+						<icon class="weui-icon-search_in-box" type="search" size="15"></icon>
+						<input type="text" class="weui-search-bar__input" placeholder="搜索商品" />
+					</view>
+					<!-- 可编辑时的搜索框 -->
+					<label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+						<icon class="weui-icon-search" type="search" size="14"></icon>
+						<view class="weui-search-bar__text">搜索商品</view>
+					</label>
+				</view>
+				<!-- 取消搜索 -->
+				<view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+			</view>
+		</view>
+        
+		<view class="cu-list grid col-2 no-border" id="shoplist">
+			<view class="flex justify-center cu-item" wx:for="{{categories}}" wx:key>
+				<image src="{{item.img}}" mode='widthFix' style='width:50%;height:200rpx;margin-bottom:8px'></image>
+				<text style="font-weight:600;color:#e84118">￥{{item.price}}</text>
+				<view class="starBox">
+					<cover-image wx:for="{{item.star}}" wx:key="star" src="../../../scr/img/icon/star_normal.png"></cover-image>
+					<cover-image wx:for="{{5 - item.star}}" wx:key="darkStar" src="../../../scr/img/icon/star_dark.png"></cover-image>
+				</view>
+				<text>{{item.name}}</text>
+			</view>
+		</view>
+	</view>
+	<view class='cu-tabbar-height'></view>
+</scroll-view>

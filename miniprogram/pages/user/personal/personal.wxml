@@ -1,6 +1,6 @@
 <view class="container">
     <view id="personInfoBox">
-        <cover-image src="../../scr/img/icon/default2.jpeg"></cover-image>
+        <cover-image src="../../../scr/img/icon/default2.jpeg"></cover-image>
         <view id="personInfo_detail">
             <text>Maverick</text>
             <text>2020/03/20</text>
@@ -10,15 +10,15 @@
 
     <view id="settingBox">
         <view class="settingItem">
-            <cover-image src="../../scr/img/icon/order_light.png"></cover-image>
+            <cover-image src="../../../scr/img/icon/order_light.png"></cover-image>
             <text>订单</text>
         </view>
         <view class="settingItem">
-            <cover-image src="../../scr/img/icon/address_light.png"></cover-image>
+            <cover-image src="../../../scr/img/icon/address_light.png"></cover-image>
             <text>地址</text>
         </view>
         <view class="settingItem">
-            <cover-image src="../../scr/img/icon/setting_light.png"></cover-image>
+            <cover-image src="../../../scr/img/icon/setting_light.png"></cover-image>
             <text>设置</text>
         </view>
     </view>

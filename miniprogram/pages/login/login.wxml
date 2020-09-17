@@ -1,44 +1,74 @@
-<view class="container">
+<view class="mask mask-light"></view>
 
-	<view class="switchbtn" bindtap="switchSwiper">
-		<text>{{txLabel}}</text>
-		<image src="../../scr/img/icon/arrow_r.png"></image>
+<view class="menuBox">
+
+
+	<view id="selogen" class="flex justify-center">
+		<view class="flex flex-wrap title">
+			<view class="basis-xx">阅读</view>
+			<view class="basis-xx">丈量世界</view>
+		</view>
 	</view>
 
-	<swiper easing-function="easeOutCubic" class="sign-board" current="{{currentPage}}" bindchange="switchIndex">
+	<view id="swiper">
 
-		<swiper-item>
-			<view class="word">
-				<text>阅读</text>
-				<text>丈量世界</text>
-			</view>
-			<view class="btnBox">
-				<view class="btn-fill">使用微信账号注册</view>
-				<view class="btn-blank">使用手机账号注册</view>
-			</view>
-		</swiper-item>
+		<swiper current="0" current="{{currentPage}}" bindchange="switchIndex">
 
-		<swiper-item>
-			<view class="word">
-				<text>阅读</text>
-				<text>丈量世界</text>
-			</view>
-			<view class="inputBox">
-				<form>
-					<input placeholder="请输入账号" type="number" placeholder-style="color:#fff"></input>
-					<input placeholder="请输入密码" password="true" placeholder-style="color:#fff"></input>
-					<view form-type="submit" class="btn-fill" bindtap="login">登陆</view>
-					<view class="addInfoBox">
-						<view class="addInfoCheckBox" bindtap="checkAdmin">
-							<image src="{{adminImg}}" id="amdinCheck"></image>
-							<label for="amdinCheck">管理员</label>
-						</view>
-						<text>使用微信登陆？</text>
+			<swiper-item class="padding" style="height:max-content">
+
+				<view wx:if="{{isUser}}" class="flex flex-wrap">
+					<view class="btn btn-fill flex align-center justify-center" bindtap="login">
+						<text class="cuIcon-mark text-white" style="font-size:20px;color:#292C32"></text>
+						<text style="padding-left:10px">授权微信登录</text>
 					</view>
-				</form>
-			</view>
-		</swiper-item>
+					<view class="m-form-group">
+						<view style="text-align:center">
+							<text style="color:#ffffff;font-size:13px;" bindtap="goAdmin">登录后台?</text>
+						</view>
+					</view>
+				</view>
+				<view wx:else class="flex flex-wrap">
+					<form style="width:100%">
+						<view class="m-form-group">
+							<input placeholder="请输入账号" type="number" placeholder-style="color:#ffffff"></input>
+						</view>
+						<view class="m-form-group">
+							<input placeholder="请输密码" password="true" placeholder-style="color:#ffffff"></input>
+						</view>
+						<view class="m-form-group">
+							<view class="btn btn-fill" bindtap="adminLogin">登 陆</view>
+						</view>
+						<view class="m-form-group">
+							<view>
+								<text style="color:#ffffff;font-size:13px;" bindtap="goUser">游客登陆?</text>
+							</view>
+						</view>
+					</form>
+				</view>
+			</swiper-item>
+			<swiper-item class="padding" style="height:max-content">
+				<view class="flex flex-wrap">
+					<view class="basis-xx">
+						<view class="btn btn-fill flex align-center justify-center">
+							<text class="cuIcon-mark text-white" style="font-size:20px;color:#292C32"></text>
+							<text style="padding-left:10px">微信账号注册</text>
+						</view>
+					</view>
+					<view class="basis-xx">
+						<view class="btn btn-fill flex align-center justify-center">
+							<text class="cuIcon-phone text-white" style="font-size:20px;color:#292C32"></text>
+							<text style="padding-left:10px">手机账号注册</text>
+						</view>
+					</view>
+				</view>
+			</swiper-item>
+		</swiper>
 
-	</swiper>
+	</view>
+
+	<view id="switchBtn" class="flex justify-center align-center" bindtap="switchSwiper">
+		<text class="cuIcon-{{switchIcon}}" style="padding-right:10px;font-size:20px"></text>
+		<text style="font-size:30rpx">{{switchLabel}}</text>
+	</view>
 
 </view>

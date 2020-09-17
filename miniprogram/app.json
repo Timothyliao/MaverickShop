@@ -1,37 +1,43 @@
 {
     "pages": [
         "pages/login/login",
-        "pages/shop/shop",
-        "pages/cart/cart",
-        "pages/personal/personal"
+        "pages/user/shop/shop",
+        "pages/user/cart/cart",
+        "pages/user/personal/personal",
+        "pages/management/index/index"
     ],
     "window": {
-        "backgroundColor": "#F6F6F6",
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#F6F6F6",
-        "navigationBarTitleText": "Maverick Shop",
-        "navigationBarTextStyle": "black"
+        "navigationBarBackgroundColor": "#39b54a",
+        "navigationBarTitleText": "Color UI",
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "white"
+    },
+    "usingComponents": {
+        "cu-custom": "/colorui/components/cu-custom"
     },
     "sitemapLocation": "sitemap.json",
     "style": "v2",
     "tabBar": {
-        "color": "#8a8a8a",
-        "selectedColor": "#2c2c2c",
+        "color": "#AAAAAA",
+        "selectedColor": "#0A84FF",
         "list": [
             {
-                "pagePath": "pages/shop/shop",
+                "pagePath": "pages/user/shop/shop",
                 "iconPath": "./scr/img/navigate/home_normal_light.png",
-                "selectedIconPath": "./scr/img/navigate/home_select.png"
+                "selectedIconPath": "./scr/img/navigate/home_select.png",
+                "text": "商城"
             },
             {
-                "pagePath": "pages/cart/cart",
+                "pagePath": "pages/user/cart/cart",
                 "iconPath": "./scr/img/navigate/sc_normal_light.png",
-                "selectedIconPath": "./scr/img/navigate/sc_select.png"
+                "selectedIconPath": "./scr/img/navigate/sc_select.png",
+                "text": "购物车"
             },
             {
-                "pagePath": "pages/personal/personal",
+                "pagePath": "pages/user/personal/personal",
                 "iconPath": "./scr/img/navigate/wo_normal_light.png",
-                "selectedIconPath": "./scr/img/navigate/wo_select.png"
+                "selectedIconPath": "./scr/img/navigate/wo_select.png",
+                "text": "个人中心"
             }
         ]
     }

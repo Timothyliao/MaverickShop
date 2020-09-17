@@ -1,0 +1,48 @@
+<view class="container">
+	<view class="topBar">
+		<view class="topBar_item">
+			<image src="../../../scr/img/icon/delete.png"></image>
+			<label>清空购物车</label>
+		</view>
+		<view class="topBar_item">
+			<image src="../../../scr/img/icon/setting2.png"></image>
+			<label>管理购物车</label>
+		</view>
+	</view>
+
+	<scroll-view class="content" scroll-y="true"> 
+		<view class="content-item">
+			<view class="imgBox">
+				<image src="../../../scr/img/icon/default2.jpeg"></image>
+			</view>
+
+			<view class="detail">
+				<text>C++ Primer中文版</text>
+				<text>(美)李普曼</text>
+				<text style="font-weight:600;color:#e84118">￥89.60</text>
+				<view class="counter">
+					<image src="../../../scr/img/icon/minus.png" bindtap="mins"></image>
+					<text>{{num}}</text>
+					<image src="../../../scr/img/icon/plus.png" bindtap="plus"></image>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+
+	<view class="bottomMenu">
+		<view class="bottomBox">
+			<view class="controlMenu">
+				<view class="checksBox" bindtap="checkAll">
+					<image src="{{checkImg}}" id="checkImg"></image>
+					<label for="checkImg">{{checkLabel}}</label>
+				</view>
+				<view class="priceBox">
+					<text>总计：￥{{totalPrice}}</text>
+				</view>
+			</view>
+			<view class="payBtn">
+				<text>结算</text>
+			</view>
+		</view>
+	</view>
+</view>
